@@ -34,7 +34,9 @@
                                 <input type="hidden" name="product_description" value="{{ product.description }}">
                                 <input type="hidden" name="product_price" value="{{ product.price }}">
                                 <input type="hidden" name="product_url" value="{{ product.url }}">
-                                <input type="image" src="{{ product.url }}" alt="Order now" class="btn btn-outline-primary">
+                                <!-- Inline CSS edit thanks to ChatGPT after I figured out that it wasn't the card, but the image size that was causing my overlap. 
+                                https://chat.openai.com/share/379f705f-d9c9-4c7e-97b7-74e06c681933 -->
+                                <input type="image" src="{{ product.url }}" alt="Order now" class="btn btn-outline-primary" style="width: 150px; height: auto;">
                             </form>
 
 
