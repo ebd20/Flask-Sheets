@@ -5,8 +5,10 @@
 {% block content %}
 
     <h1>Magic the Gathering - Cube P1P1</h1>
-        <!-- pulled this info on image insertion from : https://getbootstrap.com/docs/4.0/content/images/-->
-    <img src="https://raw.githubusercontent.com/ebd20/Flask-Sheets/main/Images/048.jpg" class="rounded mx-auto d-block"  alt="Responsive image">
+ <!-- pulled this info on image insertion from : https://getbootstrap.com/docs/4.0/content/images/ - it wasn't responsive out of the box, CHATGPT helped me with that:
+https://chat.openai.com/share/2f255a7a-8f66-4fbc-80ee-f8771b482d7f-->
+ <img src="https://raw.githubusercontent.com/ebd20/Flask-Sheets/main/Images/048.jpg" class="rounded mx-auto d-block d-none d-md-block" alt="Responsive image">
+
 
     <p class="lead"><b>A Magic: The Gathering cube</b> is a custom set of Magic the Gathering cards that a player or group of players has put together for the purpose of drafting. These cubes often consist of a curated set of cards that allow for numerous draft possibilities. Cubes can vary widely in themes, sizes, and the power level of the cards included. They provide a reusable and personalized drafting experience without the need to purchase new packs.</p>
 
