@@ -13,7 +13,9 @@
         <!--div class="container"-->
         <div class="row">
             {% for product in products[0:15] %}
-                <div class="col">
+        <!-- Chat GPT helped me make this more responsive - without these additions the cards overlapped in my large browser window
+                            https://chat.openai.com/share/379f705f-d9c9-4c7e-97b7-74e06c681933-->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card" style="width: 18rem; margin-bottom: 20px;">
                         <!-- <img class="card-img-top" src="{{ product.url }}" alt="an image of '{{ product.name }}'"> -->
                         <div class="card-body">
