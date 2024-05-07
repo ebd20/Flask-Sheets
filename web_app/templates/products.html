@@ -12,25 +12,28 @@
 
         <!--div class="container"-->
         <div class="row">
-            {% for product in products[0:3] %}
+            {% for product in products[0:15] %}
                 <div class="col">
                     <div class="card" style="width: 18rem; margin-bottom: 20px;">
-                        <img class="card-img-top" src="{{ product.url }}" alt="an image of '{{ product.name }}'">
+                        <!-- <img class="card-img-top" src="{{ product.url }}" alt="an image of '{{ product.name }}'"> -->
                         <div class="card-body">
-                            <h5 class="card-title">{{ product.name }}</h5>
-                            <p class="card-text">{{ product.description }}</p>
+                           <!-- Since the text is on the image, I don't need a description on the card-->
+                            <!-- <h5 class="card-title">{{ product.name }}</h5>-->
+                            <!-- <p class="card-text">{{ product.description }}</p> -->
 
                             <!--button class="btn btn-primary">Order now!</button-->
 
                             <!-- CREATE ORDER -->
+                            <!-- I wanted to replace the image + button combo with just the image (acting as a button).  ChatGPT helped me with this update
+                            https://chat.openai.com/share/379f705f-d9c9-4c7e-97b7-74e06c681933-->
                             <form method="POST" action="/user/orders/create" style="display: inline;">
                                 <input type="hidden" name="product_id" value="{{ product.id }}">
                                 <input type="hidden" name="product_name" value="{{ product.name }}">
                                 <input type="hidden" name="product_description" value="{{ product.description }}">
                                 <input type="hidden" name="product_price" value="{{ product.price }}">
                                 <input type="hidden" name="product_url" value="{{ product.url }}">
-                                <button type="submit" class="btn btn-outline-primary">Order now!</button>
-                             </form>
+                                <input type="image" src="{{ product.url }}" alt="Order now" class="btn btn-outline-primary">
+                            </form>
 
 
                         </div>
