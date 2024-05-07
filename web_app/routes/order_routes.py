@@ -40,7 +40,8 @@ def create_order():
             "user_email": user_email,
             "product_id": int(product_id),
             "product_name": product_name,
-            "product_price": float(product_price)
+            # I'm no longer using a price, instead this is now a list of all the cards that were possible, separated by commas, so I needed to remove this float conversion
+            "product_price": product_price
         }
         #order = Order(params)
         #order.save()
