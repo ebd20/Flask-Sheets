@@ -4,13 +4,13 @@
 
 {% block content %}
 
-    <h1>User Orders</h1>
+    <h1>Your Choicess</h1>
 
-    <p class="lead">Here are your recent orders:</p>
+    <p class="lead">Here are your recent selections in the P1P1:</p>
 
     {% if orders|length == 0 %}
-        <p class="lead" >Oh, you have not yet placed an order. Please visit the
-            <a href="/products">products page</a>!
+        <p class="lead" >Oh, you have not yet drafted a card. Please visit the
+            <a href="/products">Selection page</a>!
         </p>
     {% else %}
         <div class="table-responsive">
