@@ -16,12 +16,12 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+#github was kicking out an error if I didn't update these ala https://stackoverflow.com/questions/77897660/github-actions-node-js-16-actions-are-deprecated-warning
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Set up Python 3.10
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v5
       with:
         python-version: "3.10"
 
