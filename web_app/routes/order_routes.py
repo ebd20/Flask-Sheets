@@ -48,7 +48,7 @@ def create_order():
         # alternatively:
         Order.create(params)
 
-        flash(f"Order received!", "success")
+        flash(f"Good Choice!", "success")
         return redirect("/user/orders")
     except Exception as err:
         print(err)
